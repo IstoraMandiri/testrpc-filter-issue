@@ -73,9 +73,9 @@ describe('Reproduce bug', function () {
         .then(() => {
           setTimeout(() => {
             console.log('web3 DONE WITH B')
-            assert.equal(triggerCount, 1);
             watcher.stopWatching(function () {
               console.log('we stopped filtering B!')
+              assert.equal(triggerCount, 1);
               done();
             });
           }, 500);
